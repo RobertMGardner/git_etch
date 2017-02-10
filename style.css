@@ -1,7 +1,9 @@
+body{
+}
+
 #canvas{
 	height:320px;
 	width: 320px;
-	background-color: white;
 	padding: 0px;
 	margin: 0px;
 	border: 1px solid black;
@@ -13,4 +15,5 @@
 	display: inline-block;
 	margin: 0px;
 	float:left;
+	border-radius: 3px;
 }

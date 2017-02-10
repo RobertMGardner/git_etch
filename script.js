@@ -9,21 +9,19 @@ $(document).ready(function(){
 		var size = prompt("What size canvas would you like?");
 		if(size < 4 || size > 64)
 			size = prompt("Must be between 4 and 64");
-
-		$('.cell').remove();
+		canvasSize = size;
+		$('.cell').detach();
 		drawCanvas(size);
-		return;
+		checkCursor();
 	});
 
 	$('#clear-canvas').on('click', function(){
-		$('.cell').remove();
+		$('.cell').detach();
 		drawCanvas(canvasSize);
+		checkCursor();
 	});
 
-	$('.cell').hover(function(){
-		$(this).css("background-color", "black");
-		console.log(String("painted" + this.id));
-	});
+	checkCursor();
 
 });
 
@@ -41,3 +39,9 @@ function drawCanvas(canvasSize){
 
 }
 
+function checkCursor(){
+	$('.cell').hover(function(){
+		$(this).css("background-color", "black");
+		console.log(String("painted" + this.id));
+	});
+}
