@@ -1,0 +1,1 @@
+This is a JQuery project replicating basic functionality of an etch-a-sketch for The Odin Project. Robert M Gardner
